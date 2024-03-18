@@ -28,21 +28,27 @@ function Login() {
 							Cure Smart
 						</h1>
 					</center>
-					<div className="glass grid border-2 rounded-2xl mt-[12vh] px-[4vw] py-[2vw] w-[40vw] ">
+					<div className="glass shadow-2xl shadow-black grid border-2 rounded-2xl mt-[8vh] px-[4vw] py-[2vw] w-[40vw] gap-4">
 						<center>
-							<h1 className="text-2xl font-semibold">Sign In</h1>
+							<div
+								className="h-32 w-32 bg-cover"
+								style={{
+									backgroundImage:
+										'url(/images/login_icon.png)',
+								}}
+							></div>
 						</center>
 						<div className="flex place-content-center">
 							<form
 								onSubmit={(e) => {
 									e.preventDefault();
 								}}
-								className="grid gap-4 w-[80%]"
+								className="grid gap-2 w-[80%]"
 							>
 								<input
 									type="email"
 									name="email"
-									className="bg-[#ffffff1d]"
+									className="border-2 border-[#3a24243d] px-4 py-2 text-lg placeholder:text-[#0000006b] placeholder:font-semibold rounded-full font-normal tracking-widest  bg-[#c2ededa5]"
 									placeholder="Enter your email"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +56,7 @@ function Login() {
 								<input
 									type="password"
 									name="password"
-									className="bg-[#ffffff1d]"
+									className="border-2 border-[#3a24243d] px-4 py-2 text-lg placeholder:text-[#0000006b] placeholder:font-semibold rounded-full font-normal tracking-widest bg-[#c2ededa5]"
 									placeholder="Enter your password"
 									value={password}
 									onChange={(e) =>
@@ -61,10 +67,10 @@ function Login() {
 									<input
 										type="submit"
 										value="Login"
-										className="bg-transparent tracking-wider  w-14 hover:w-20 ease-in duration-200 border-t-2 border-b-2 text-[#ffffff98]  mb-4"
+										className="bg-transparent tracking-wider w-24 hover:w-32 ease-in duration-200 border-t-2 border-b-2 border-slate-700 text-[#251b1beb] font-bold text-xl mt-8 mb-2 py-1"
 									/>
 									<h1
-										className="cursor-pointer font-semibold text-md  hover:text-slate-600"
+										className="cursor-pointer font-semibold text-md text-slate-700  hover:text-blue-700"
 										onClick={() => setRegister(true)}
 									>
 										register now
